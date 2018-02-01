@@ -7,8 +7,8 @@ def main():
     parser.add_option("-s", "--show-fields", dest="show_fields",
                   help="show fields of table", action="store_true", default=False)
     (options, args) = parser.parse_args()
-    print options
-    print args
+    #print options
+    #print args
 
     if len(args) >= 2:
         host = args[0]
@@ -24,10 +24,10 @@ def main():
     else:
         host = 'localhost'
         port = 9083
-    print 'host: ', host
-    print 'port: ', port
-    print 'database_pattern: ', database_pattern
-    print 'table_pattern: ', table_pattern
+    #print 'host: ', host
+    #print 'port: ', port
+    #print 'database_pattern: ', database_pattern
+    #print 'table_pattern: ', table_pattern
 
     from thrift_hive_metastore import ThriftHiveMetastore
     from thrift_hive_metastore.ttypes import *
@@ -52,10 +52,11 @@ def main():
     # Connect!
     transport.open()
     for d in client.get_databases(database_pattern):
-        print '[%s]' % d
+        #print '[%s]' % d
         for t in client.get_tables(d, table_pattern):
             table = client.get_table(d, t)
-            print ' '*4, "{namespace}.{name}:    {location}".format(namespace=d, name=t, location=table.sd.location)
+            #print ' '*4, "{namespace}.{name}:    {location}".format(namespace=d, name=t, location=table.sd.location)
             if options.show_fields:
                 for c in table.sd.cols:
-                    print ' '*8, c
+                    #print ' '*8, c
+                    pass

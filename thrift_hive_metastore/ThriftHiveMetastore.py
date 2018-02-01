@@ -9,7 +9,7 @@
 from thrift.Thrift import TType, TMessageType, TException, TApplicationException
 import fb303.FacebookService
 import logging
-from ttypes import *
+from thrift_hive_metastore.ttypes import *
 from thrift.Thrift import TProcessor
 from thrift.transport import TTransport
 from thrift.protocol import TBinaryProtocol, TProtocol
