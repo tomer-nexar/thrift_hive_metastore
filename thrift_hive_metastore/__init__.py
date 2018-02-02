@@ -30,7 +30,7 @@ def main():
     #print 'table_pattern: ', table_pattern
 
     from thrift_hive_metastore import ThriftHiveMetastore
-    from thrift_hive_metastore.ttypes import *
+    #from thrift_hive_metastore.ttypes import *
 
     from thrift import Thrift
     from thrift.transport import TSocket
