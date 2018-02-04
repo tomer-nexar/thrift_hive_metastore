@@ -445,7 +445,7 @@ class Type:
         if ftype == TType.LIST:
           self.fields = []
           (_etype3, _size0) = iprot.readListBegin()
-          for _i4 in xrange(_size0):
+          for _i4 in range(_size0):
             _elem5 = FieldSchema()
             _elem5.read(iprot)
             self.fields.append(_elem5)
@@ -561,7 +561,7 @@ class HiveObjectRef:
         if ftype == TType.LIST:
           self.partValues = []
           (_etype10, _size7) = iprot.readListBegin()
-          for _i11 in xrange(_size7):
+          for _i11 in range(_size7):
             _elem12 = iprot.readString()
             self.partValues.append(_elem12)
           iprot.readListEnd()
@@ -882,7 +882,7 @@ class PrivilegeBag:
         if ftype == TType.LIST:
           self.privileges = []
           (_etype17, _size14) = iprot.readListBegin()
-          for _i18 in xrange(_size14):
+          for _i18 in range(_size14):
             _elem19 = HiveObjectPrivilege()
             _elem19.read(iprot)
             self.privileges.append(_elem19)
@@ -962,11 +962,11 @@ class PrincipalPrivilegeSet:
         if ftype == TType.MAP:
           self.userPrivileges = {}
           (_ktype22, _vtype23, _size21 ) = iprot.readMapBegin()
-          for _i25 in xrange(_size21):
+          for _i25 in range(_size21):
             _key26 = iprot.readString()
             _val27 = []
             (_etype31, _size28) = iprot.readListBegin()
-            for _i32 in xrange(_size28):
+            for _i32 in range(_size28):
               _elem33 = PrivilegeGrantInfo()
               _elem33.read(iprot)
               _val27.append(_elem33)
@@ -979,11 +979,11 @@ class PrincipalPrivilegeSet:
         if ftype == TType.MAP:
           self.groupPrivileges = {}
           (_ktype35, _vtype36, _size34 ) = iprot.readMapBegin()
-          for _i38 in xrange(_size34):
+          for _i38 in range(_size34):
             _key39 = iprot.readString()
             _val40 = []
             (_etype44, _size41) = iprot.readListBegin()
-            for _i45 in xrange(_size41):
+            for _i45 in range(_size41):
               _elem46 = PrivilegeGrantInfo()
               _elem46.read(iprot)
               _val40.append(_elem46)
@@ -996,11 +996,11 @@ class PrincipalPrivilegeSet:
         if ftype == TType.MAP:
           self.rolePrivileges = {}
           (_ktype48, _vtype49, _size47 ) = iprot.readMapBegin()
-          for _i51 in xrange(_size47):
+          for _i51 in range(_size47):
             _key52 = iprot.readString()
             _val53 = []
             (_etype57, _size54) = iprot.readListBegin()
-            for _i58 in xrange(_size54):
+            for _i58 in range(_size54):
               _elem59 = PrivilegeGrantInfo()
               _elem59.read(iprot)
               _val53.append(_elem59)
@@ -1577,7 +1577,7 @@ class GetRoleGrantsForPrincipalResponse:
         if ftype == TType.LIST:
           self.principalGrants = []
           (_etype72, _size69) = iprot.readListBegin()
-          for _i73 in xrange(_size69):
+          for _i73 in range(_size69):
             _elem74 = RolePrincipalGrant()
             _elem74.read(iprot)
             self.principalGrants.append(_elem74)
@@ -1720,7 +1720,7 @@ class GetPrincipalsInRoleResponse:
         if ftype == TType.LIST:
           self.principalGrants = []
           (_etype79, _size76) = iprot.readListBegin()
-          for _i80 in xrange(_size76):
+          for _i80 in range(_size76):
             _elem81 = RolePrincipalGrant()
             _elem81.read(iprot)
             self.principalGrants.append(_elem81)
@@ -2037,7 +2037,7 @@ class Database:
         if ftype == TType.MAP:
           self.parameters = {}
           (_ktype84, _vtype85, _size83 ) = iprot.readMapBegin()
-          for _i87 in xrange(_size83):
+          for _i87 in range(_size83):
             _key88 = iprot.readString()
             _val89 = iprot.readString()
             self.parameters[_key88] = _val89
@@ -2174,7 +2174,7 @@ class SerDeInfo:
         if ftype == TType.MAP:
           self.parameters = {}
           (_ktype93, _vtype94, _size92 ) = iprot.readMapBegin()
-          for _i96 in xrange(_size92):
+          for _i96 in range(_size92):
             _key97 = iprot.readString()
             _val98 = iprot.readString()
             self.parameters[_key97] = _val98
@@ -2343,7 +2343,7 @@ class SkewedInfo:
         if ftype == TType.LIST:
           self.skewedColNames = []
           (_etype104, _size101) = iprot.readListBegin()
-          for _i105 in xrange(_size101):
+          for _i105 in range(_size101):
             _elem106 = iprot.readString()
             self.skewedColNames.append(_elem106)
           iprot.readListEnd()
@@ -2353,10 +2353,10 @@ class SkewedInfo:
         if ftype == TType.LIST:
           self.skewedColValues = []
           (_etype110, _size107) = iprot.readListBegin()
-          for _i111 in xrange(_size107):
+          for _i111 in range(_size107):
             _elem112 = []
             (_etype116, _size113) = iprot.readListBegin()
-            for _i117 in xrange(_size113):
+            for _i117 in range(_size113):
               _elem118 = iprot.readString()
               _elem112.append(_elem118)
             iprot.readListEnd()
@@ -2368,10 +2368,10 @@ class SkewedInfo:
         if ftype == TType.MAP:
           self.skewedColValueLocationMaps = {}
           (_ktype120, _vtype121, _size119 ) = iprot.readMapBegin()
-          for _i123 in xrange(_size119):
+          for _i123 in range(_size119):
             _key124 = []
             (_etype129, _size126) = iprot.readListBegin()
-            for _i130 in xrange(_size126):
+            for _i130 in range(_size126):
               _elem131 = iprot.readString()
               _key124.append(_elem131)
             iprot.readListEnd()
@@ -2503,7 +2503,7 @@ class StorageDescriptor:
         if ftype == TType.LIST:
           self.cols = []
           (_etype141, _size138) = iprot.readListBegin()
-          for _i142 in xrange(_size138):
+          for _i142 in range(_size138):
             _elem143 = FieldSchema()
             _elem143.read(iprot)
             self.cols.append(_elem143)
@@ -2545,7 +2545,7 @@ class StorageDescriptor:
         if ftype == TType.LIST:
           self.bucketCols = []
           (_etype147, _size144) = iprot.readListBegin()
-          for _i148 in xrange(_size144):
+          for _i148 in range(_size144):
             _elem149 = iprot.readString()
             self.bucketCols.append(_elem149)
           iprot.readListEnd()
@@ -2555,7 +2555,7 @@ class StorageDescriptor:
         if ftype == TType.LIST:
           self.sortCols = []
           (_etype153, _size150) = iprot.readListBegin()
-          for _i154 in xrange(_size150):
+          for _i154 in range(_size150):
             _elem155 = Order()
             _elem155.read(iprot)
             self.sortCols.append(_elem155)
@@ -2566,7 +2566,7 @@ class StorageDescriptor:
         if ftype == TType.MAP:
           self.parameters = {}
           (_ktype157, _vtype158, _size156 ) = iprot.readMapBegin()
-          for _i160 in xrange(_size156):
+          for _i160 in range(_size156):
             _key161 = iprot.readString()
             _val162 = iprot.readString()
             self.parameters[_key161] = _val162
@@ -2791,7 +2791,7 @@ class Table:
         if ftype == TType.LIST:
           self.partitionKeys = []
           (_etype171, _size168) = iprot.readListBegin()
-          for _i172 in xrange(_size168):
+          for _i172 in range(_size168):
             _elem173 = FieldSchema()
             _elem173.read(iprot)
             self.partitionKeys.append(_elem173)
@@ -2802,7 +2802,7 @@ class Table:
         if ftype == TType.MAP:
           self.parameters = {}
           (_ktype175, _vtype176, _size174 ) = iprot.readMapBegin()
-          for _i178 in xrange(_size174):
+          for _i178 in range(_size174):
             _key179 = iprot.readString()
             _val180 = iprot.readString()
             self.parameters[_key179] = _val180
@@ -2992,7 +2992,7 @@ class Partition:
         if ftype == TType.LIST:
           self.values = []
           (_etype187, _size184) = iprot.readListBegin()
-          for _i188 in xrange(_size184):
+          for _i188 in range(_size184):
             _elem189 = iprot.readString()
             self.values.append(_elem189)
           iprot.readListEnd()
@@ -3028,7 +3028,7 @@ class Partition:
         if ftype == TType.MAP:
           self.parameters = {}
           (_ktype191, _vtype192, _size190 ) = iprot.readMapBegin()
-          for _i194 in xrange(_size190):
+          for _i194 in range(_size190):
             _key195 = iprot.readString()
             _val196 = iprot.readString()
             self.parameters[_key195] = _val196
@@ -3162,7 +3162,7 @@ class PartitionWithoutSD:
         if ftype == TType.LIST:
           self.values = []
           (_etype203, _size200) = iprot.readListBegin()
-          for _i204 in xrange(_size200):
+          for _i204 in range(_size200):
             _elem205 = iprot.readString()
             self.values.append(_elem205)
           iprot.readListEnd()
@@ -3187,7 +3187,7 @@ class PartitionWithoutSD:
         if ftype == TType.MAP:
           self.parameters = {}
           (_ktype207, _vtype208, _size206 ) = iprot.readMapBegin()
-          for _i210 in xrange(_size206):
+          for _i210 in range(_size206):
             _key211 = iprot.readString()
             _val212 = iprot.readString()
             self.parameters[_key211] = _val212
@@ -3299,7 +3299,7 @@ class PartitionSpecWithSharedSD:
         if ftype == TType.LIST:
           self.partitions = []
           (_etype219, _size216) = iprot.readListBegin()
-          for _i220 in xrange(_size216):
+          for _i220 in range(_size216):
             _elem221 = PartitionWithoutSD()
             _elem221.read(iprot)
             self.partitions.append(_elem221)
@@ -3384,7 +3384,7 @@ class PartitionListComposingSpec:
         if ftype == TType.LIST:
           self.partitions = []
           (_etype226, _size223) = iprot.readListBegin()
-          for _i227 in xrange(_size223):
+          for _i227 in range(_size223):
             _elem228 = Partition()
             _elem228.read(iprot)
             self.partitions.append(_elem228)
@@ -3645,7 +3645,7 @@ class Index:
         if ftype == TType.MAP:
           self.parameters = {}
           (_ktype231, _vtype232, _size230 ) = iprot.readMapBegin()
-          for _i234 in xrange(_size230):
+          for _i234 in range(_size230):
             _key235 = iprot.readString()
             _val236 = iprot.readString()
             self.parameters[_key235] = _val236
@@ -5042,7 +5042,7 @@ class ColumnStatistics:
         if ftype == TType.LIST:
           self.statsObj = []
           (_etype242, _size239) = iprot.readListBegin()
-          for _i243 in xrange(_size239):
+          for _i243 in range(_size239):
             _elem244 = ColumnStatisticsObj()
             _elem244.read(iprot)
             self.statsObj.append(_elem244)
@@ -5128,7 +5128,7 @@ class AggrStats:
         if ftype == TType.LIST:
           self.colStats = []
           (_etype249, _size246) = iprot.readListBegin()
-          for _i250 in xrange(_size246):
+          for _i250 in range(_size246):
             _elem251 = ColumnStatisticsObj()
             _elem251.read(iprot)
             self.colStats.append(_elem251)
@@ -5216,7 +5216,7 @@ class SetPartitionsStatsRequest:
         if ftype == TType.LIST:
           self.colStats = []
           (_etype256, _size253) = iprot.readListBegin()
-          for _i257 in xrange(_size253):
+          for _i257 in range(_size253):
             _elem258 = ColumnStatistics()
             _elem258.read(iprot)
             self.colStats.append(_elem258)
@@ -5295,7 +5295,7 @@ class Schema:
         if ftype == TType.LIST:
           self.fieldSchemas = []
           (_etype263, _size260) = iprot.readListBegin()
-          for _i264 in xrange(_size260):
+          for _i264 in range(_size260):
             _elem265 = FieldSchema()
             _elem265.read(iprot)
             self.fieldSchemas.append(_elem265)
@@ -5306,7 +5306,7 @@ class Schema:
         if ftype == TType.MAP:
           self.properties = {}
           (_ktype267, _vtype268, _size266 ) = iprot.readMapBegin()
-          for _i270 in xrange(_size266):
+          for _i270 in range(_size266):
             _key271 = iprot.readString()
             _val272 = iprot.readString()
             self.properties[_key271] = _val272
@@ -5389,7 +5389,7 @@ class EnvironmentContext:
         if ftype == TType.MAP:
           self.properties = {}
           (_ktype277, _vtype278, _size276 ) = iprot.readMapBegin()
-          for _i280 in xrange(_size276):
+          for _i280 in range(_size276):
             _key281 = iprot.readString()
             _val282 = iprot.readString()
             self.properties[_key281] = _val282
@@ -5467,7 +5467,7 @@ class PartitionsByExprResult:
         if ftype == TType.LIST:
           self.partitions = []
           (_etype288, _size285) = iprot.readListBegin()
-          for _i289 in xrange(_size285):
+          for _i289 in range(_size285):
             _elem290 = Partition()
             _elem290.read(iprot)
             self.partitions.append(_elem290)
@@ -5678,7 +5678,7 @@ class TableStatsResult:
         if ftype == TType.LIST:
           self.tableStats = []
           (_etype295, _size292) = iprot.readListBegin()
-          for _i296 in xrange(_size292):
+          for _i296 in range(_size292):
             _elem297 = ColumnStatisticsObj()
             _elem297.read(iprot)
             self.tableStats.append(_elem297)
@@ -5754,11 +5754,11 @@ class PartitionsStatsResult:
         if ftype == TType.MAP:
           self.partStats = {}
           (_ktype300, _vtype301, _size299 ) = iprot.readMapBegin()
-          for _i303 in xrange(_size299):
+          for _i303 in range(_size299):
             _key304 = iprot.readString()
             _val305 = []
             (_etype309, _size306) = iprot.readListBegin()
-            for _i310 in xrange(_size306):
+            for _i310 in range(_size306):
               _elem311 = ColumnStatisticsObj()
               _elem311.read(iprot)
               _val305.append(_elem311)
@@ -5856,7 +5856,7 @@ class TableStatsRequest:
         if ftype == TType.LIST:
           self.colNames = []
           (_etype318, _size315) = iprot.readListBegin()
-          for _i319 in xrange(_size315):
+          for _i319 in range(_size315):
             _elem320 = iprot.readString()
             self.colNames.append(_elem320)
           iprot.readListEnd()
@@ -5964,7 +5964,7 @@ class PartitionsStatsRequest:
         if ftype == TType.LIST:
           self.colNames = []
           (_etype325, _size322) = iprot.readListBegin()
-          for _i326 in xrange(_size322):
+          for _i326 in range(_size322):
             _elem327 = iprot.readString()
             self.colNames.append(_elem327)
           iprot.readListEnd()
@@ -5974,7 +5974,7 @@ class PartitionsStatsRequest:
         if ftype == TType.LIST:
           self.partNames = []
           (_etype331, _size328) = iprot.readListBegin()
-          for _i332 in xrange(_size328):
+          for _i332 in range(_size328):
             _elem333 = iprot.readString()
             self.partNames.append(_elem333)
           iprot.readListEnd()
@@ -6073,7 +6073,7 @@ class AddPartitionsResult:
         if ftype == TType.LIST:
           self.partitions = []
           (_etype339, _size336) = iprot.readListBegin()
-          for _i340 in xrange(_size336):
+          for _i340 in range(_size336):
             _elem341 = Partition()
             _elem341.read(iprot)
             self.partitions.append(_elem341)
@@ -6169,7 +6169,7 @@ class AddPartitionsRequest:
         if ftype == TType.LIST:
           self.parts = []
           (_etype346, _size343) = iprot.readListBegin()
-          for _i347 in xrange(_size343):
+          for _i347 in range(_size343):
             _elem348 = Partition()
             _elem348.read(iprot)
             self.parts.append(_elem348)
@@ -6281,7 +6281,7 @@ class DropPartitionsResult:
         if ftype == TType.LIST:
           self.partitions = []
           (_etype353, _size350) = iprot.readListBegin()
-          for _i354 in xrange(_size350):
+          for _i354 in range(_size350):
             _elem355 = Partition()
             _elem355.read(iprot)
             self.partitions.append(_elem355)
@@ -6438,7 +6438,7 @@ class RequestPartsSpec:
         if ftype == TType.LIST:
           self.names = []
           (_etype360, _size357) = iprot.readListBegin()
-          for _i361 in xrange(_size357):
+          for _i361 in range(_size357):
             _elem362 = iprot.readString()
             self.names.append(_elem362)
           iprot.readListEnd()
@@ -6448,7 +6448,7 @@ class RequestPartsSpec:
         if ftype == TType.LIST:
           self.exprs = []
           (_etype366, _size363) = iprot.readListBegin()
-          for _i367 in xrange(_size363):
+          for _i367 in range(_size363):
             _elem368 = DropPartitionsExpr()
             _elem368.read(iprot)
             self.exprs.append(_elem368)
@@ -6828,7 +6828,7 @@ class Function:
         if ftype == TType.LIST:
           self.resourceUris = []
           (_etype374, _size371) = iprot.readListBegin()
-          for _i375 in xrange(_size371):
+          for _i375 in range(_size371):
             _elem376 = ResourceUri()
             _elem376.read(iprot)
             self.resourceUris.append(_elem376)
@@ -7057,7 +7057,7 @@ class GetOpenTxnsInfoResponse:
         if ftype == TType.LIST:
           self.open_txns = []
           (_etype381, _size378) = iprot.readListBegin()
-          for _i382 in xrange(_size378):
+          for _i382 in range(_size378):
             _elem383 = TxnInfo()
             _elem383.read(iprot)
             self.open_txns.append(_elem383)
@@ -7148,7 +7148,7 @@ class GetOpenTxnsResponse:
         if ftype == TType.SET:
           self.open_txns = set()
           (_etype388, _size385) = iprot.readSetBegin()
-          for _i389 in xrange(_size385):
+          for _i389 in range(_size385):
             _elem390 = iprot.readI64()
             self.open_txns.add(_elem390)
           iprot.readSetEnd()
@@ -7327,7 +7327,7 @@ class OpenTxnsResponse:
         if ftype == TType.LIST:
           self.txn_ids = []
           (_etype395, _size392) = iprot.readListBegin()
-          for _i396 in xrange(_size392):
+          for _i396 in range(_size392):
             _elem397 = iprot.readI64()
             self.txn_ids.append(_elem397)
           iprot.readListEnd()
@@ -7668,7 +7668,7 @@ class LockRequest:
         if ftype == TType.LIST:
           self.component = []
           (_etype402, _size399) = iprot.readListBegin()
-          for _i403 in xrange(_size399):
+          for _i403 in range(_size399):
             _elem404 = LockComponent()
             _elem404.read(iprot)
             self.component.append(_elem404)
@@ -8249,7 +8249,7 @@ class ShowLocksResponse:
         if ftype == TType.LIST:
           self.locks = []
           (_etype409, _size406) = iprot.readListBegin()
-          for _i410 in xrange(_size406):
+          for _i410 in range(_size406):
             _elem411 = ShowLocksResponseElement()
             _elem411.read(iprot)
             self.locks.append(_elem411)
@@ -8486,7 +8486,7 @@ class HeartbeatTxnRangeResponse:
         if ftype == TType.SET:
           self.aborted = set()
           (_etype416, _size413) = iprot.readSetBegin()
-          for _i417 in xrange(_size413):
+          for _i417 in range(_size413):
             _elem418 = iprot.readI64()
             self.aborted.add(_elem418)
           iprot.readSetEnd()
@@ -8496,7 +8496,7 @@ class HeartbeatTxnRangeResponse:
         if ftype == TType.SET:
           self.nosuch = set()
           (_etype422, _size419) = iprot.readSetBegin()
-          for _i423 in xrange(_size419):
+          for _i423 in range(_size419):
             _elem424 = iprot.readI64()
             self.nosuch.add(_elem424)
           iprot.readSetEnd()
@@ -8914,7 +8914,7 @@ class ShowCompactResponse:
         if ftype == TType.LIST:
           self.compacts = []
           (_etype430, _size427) = iprot.readListBegin()
-          for _i431 in xrange(_size427):
+          for _i431 in range(_size427):
             _elem432 = ShowCompactResponseElement()
             _elem432.read(iprot)
             self.compacts.append(_elem432)
@@ -9014,7 +9014,7 @@ class AddDynamicPartitions:
         if ftype == TType.LIST:
           self.partitionnames = []
           (_etype437, _size434) = iprot.readListBegin()
-          for _i438 in xrange(_size434):
+          for _i438 in range(_size434):
             _elem439 = iprot.readString()
             self.partitionnames.append(_elem439)
           iprot.readListEnd()
@@ -9328,7 +9328,7 @@ class NotificationEventResponse:
         if ftype == TType.LIST:
           self.events = []
           (_etype444, _size441) = iprot.readListBegin()
-          for _i445 in xrange(_size441):
+          for _i445 in range(_size441):
             _elem446 = NotificationEvent()
             _elem446.read(iprot)
             self.events.append(_elem446)
@@ -9471,7 +9471,7 @@ class InsertEventRequestData:
         if ftype == TType.LIST:
           self.filesAdded = []
           (_etype451, _size448) = iprot.readListBegin()
-          for _i452 in xrange(_size448):
+          for _i452 in range(_size448):
             _elem453 = iprot.readString()
             self.filesAdded.append(_elem453)
           iprot.readListEnd()
@@ -9645,7 +9645,7 @@ class FireEventRequest:
         if ftype == TType.LIST:
           self.partitionVals = []
           (_etype458, _size455) = iprot.readListBegin()
-          for _i459 in xrange(_size455):
+          for _i459 in range(_size455):
             _elem460 = iprot.readString()
             self.partitionVals.append(_elem460)
           iprot.readListEnd()
@@ -9869,7 +9869,7 @@ class GetFileMetadataByExprResult:
         if ftype == TType.MAP:
           self.metadata = {}
           (_ktype463, _vtype464, _size462 ) = iprot.readMapBegin()
-          for _i466 in xrange(_size462):
+          for _i466 in range(_size462):
             _key467 = iprot.readI64()
             _val468 = MetadataPpdResult()
             _val468.read(iprot)
@@ -9968,7 +9968,7 @@ class GetFileMetadataByExprRequest:
         if ftype == TType.LIST:
           self.fileIds = []
           (_etype474, _size471) = iprot.readListBegin()
-          for _i475 in xrange(_size471):
+          for _i475 in range(_size471):
             _elem476 = iprot.readI64()
             self.fileIds.append(_elem476)
           iprot.readListEnd()
@@ -10078,7 +10078,7 @@ class GetFileMetadataResult:
         if ftype == TType.MAP:
           self.metadata = {}
           (_ktype479, _vtype480, _size478 ) = iprot.readMapBegin()
-          for _i482 in xrange(_size478):
+          for _i482 in range(_size478):
             _key483 = iprot.readI64()
             _val484 = iprot.readString()
             self.metadata[_key483] = _val484
@@ -10167,7 +10167,7 @@ class GetFileMetadataRequest:
         if ftype == TType.LIST:
           self.fileIds = []
           (_etype490, _size487) = iprot.readListBegin()
-          for _i491 in xrange(_size487):
+          for _i491 in range(_size487):
             _elem492 = iprot.readI64()
             self.fileIds.append(_elem492)
           iprot.readListEnd()
@@ -10291,7 +10291,7 @@ class PutFileMetadataRequest:
         if ftype == TType.LIST:
           self.fileIds = []
           (_etype497, _size494) = iprot.readListBegin()
-          for _i498 in xrange(_size494):
+          for _i498 in range(_size494):
             _elem499 = iprot.readI64()
             self.fileIds.append(_elem499)
           iprot.readListEnd()
@@ -10301,7 +10301,7 @@ class PutFileMetadataRequest:
         if ftype == TType.LIST:
           self.metadata = []
           (_etype503, _size500) = iprot.readListBegin()
-          for _i504 in xrange(_size500):
+          for _i504 in range(_size500):
             _elem505 = iprot.readString()
             self.metadata.append(_elem505)
           iprot.readListEnd()
@@ -10432,7 +10432,7 @@ class ClearFileMetadataRequest:
         if ftype == TType.LIST:
           self.fileIds = []
           (_etype511, _size508) = iprot.readListBegin()
-          for _i512 in xrange(_size508):
+          for _i512 in range(_size508):
             _elem513 = iprot.readI64()
             self.fileIds.append(_elem513)
           iprot.readListEnd()
@@ -10507,7 +10507,7 @@ class GetAllFunctionsResponse:
         if ftype == TType.LIST:
           self.functions = []
           (_etype518, _size515) = iprot.readListBegin()
-          for _i519 in xrange(_size515):
+          for _i519 in range(_size515):
             _elem520 = Function()
             _elem520.read(iprot)
             self.functions.append(_elem520)
